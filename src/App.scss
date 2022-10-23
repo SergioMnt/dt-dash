@@ -1,5 +1,123 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --user-img-size: 35px;
+  --Navbar-Background-Color: #000;
+  --Sidebar-Background-Color: #212121;
+  --Content-Background-Color: #3d3d3d;
+  --Text-Color: #e0e0e0;
+  --Detail-Text-Color: #B0B2B8;
+  --Icon-Color: #004e97;
+  --SVG-Main-Color: #659157;
+  --Maybe-another-color: #28d4da;
+  --border-gap: 20px;
+  --icon-size: 40px;
+}
+
 body {
-	font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.Navbar{
+	background-color: var(--Navbar-Background-Color);
+	color: var(--Text-Color);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px var(--border-gap);
+	height: 50px;
+	&-user{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+	}
+	&-title{
+		display: flex;
+		&> strong{
+			padding-right: 5px;
+		}
+	}
+	&-refDate{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.8rem;
+		color: var(--Detail-Text-Color);
+		&> button{
+			outline: none;
+			border: none;
+			background-color: transparent;
+			color: var(--Detail-Text-Color);
+			cursor: pointer;
+			&> span{
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+.profile-pic {
+  width: var(--user-img-size);
+  height: var(--user-img-size);
+  border-radius: 1000px;
+}
+
+.content-sidebar{
+	height: calc(100% - 50px);
+	width: 100%;
+	position: absolute;
+	display: flex;
+}
+
+.content{
+	position: absolute;
+	height: 100%;
+	right: 0;
+	background-color: #28d4da;
+}
+
+.sidebar{
+	background-color: var(--Sidebar-Background-Color);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&-nav{
+		color: var(--Text-Color);
+	}
+	&-item{
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin: 5px 0px;
+		&> span{
+			height: var(--icon-size);
+			width: var(--icon-size);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	&-text{
+		height: 100%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&-link{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		outline: none;
+		border: none;
+		background-color: transparent;
+	}
+	&-button{
+		@extend .sidebar-link;
+		cursor: pointer;
+	}
 }
