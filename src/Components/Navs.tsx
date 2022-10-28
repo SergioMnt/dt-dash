@@ -1,23 +1,21 @@
 import { useContext } from "react";
 import { Icon } from "./default";
 import { SideBarContext } from "../Context/SideBar";
-import { DataContext } from "../Context/Data";
 import { ProfileContext } from "../Context/Profile";
 
 export const Navbar = () => {
 
-    const { displayedDate, refreshDate } = useContext(DataContext)
     const { name, profilePic } = useContext(ProfileContext)
 
     return (
         <div className="Navbar">
             <div className="Navbar-title"><strong>Tickets</strong> | Dashboard</div>
-            <div className="Navbar-refDate">
+            {/* <div className="Navbar-refDate">
                 <button onClick={refreshDate}>
                     <Icon icon="refresh" />
                 </button>
                 Last Refreshed: {displayedDate}
-            </div>
+            </div> */}
             <div className="Navbar-user">
                 <img className='profile-pic' src={profilePic} alt="" />
                 { name }
@@ -66,7 +64,7 @@ export const SideBar = () => {
                 <div className="sidebar-item">
                     <Icon icon="dashboard" />
                     <div className="sidebar-text" style={{ display: width ? "none" : "block" }}>Dashboard</div>
-                    <a href="/" className="sidebar-link"></a>
+                    <a href="dt-dash" className="sidebar-link"></a>
                 </div>
                 {/* {items.map(item => {
                     return (

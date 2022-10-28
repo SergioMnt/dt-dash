@@ -10,12 +10,15 @@
   --Icon-Color: #004e97;
   --SVG-Main-Color: #659157;
   --Maybe-another-color: #28d4da;
+  --Maybe-another-color2: #738290;
   --border-gap: 20px;
   --icon-size: 40px;
 }
 
 body {
   font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .Navbar{
@@ -74,7 +77,10 @@ body {
 	position: absolute;
 	height: 100%;
 	right: 0;
-	background-color: #28d4da;
+	background-color: var(--Content-Background-Color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .sidebar{
@@ -119,5 +125,40 @@ body {
 	&-button{
 		@extend .sidebar-link;
 		cursor: pointer;
+	}
+}
+
+.dashboard{
+	background-color: var(--Maybe-another-color2);
+	width: 98%;
+	height: 96%;
+	&-header{
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		&-title{
+			color: var(--Text-Color);
+			font-size: 2rem;
+			font-weight: bolder;
+		}
+		&-date{
+			color: var(--Detail-Text-Color);
+			/* background-color: #004e97; */
+			display: flex;
+			align-items: center;
+			&> button{
+				cursor: pointer;
+				margin-right: 5px;
+				background-color: transparent;
+				color: var(--Detail-Text-Color);
+				border: none;
+				outline: none;
+			}
+		}
+	}
+	&-block{
+		background-color: #28d4da;
+		height: 100px;
+		width: 100px;
 	}
 }
