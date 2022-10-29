@@ -8,7 +8,7 @@ export const ProfileContext = createContext({name: '', profilePic: ''})
 export const ProfileProvider = ({ children }: { children: any }) => {
 
     const name = GetName(randBet(0, 10000))
-    const profilePic = `https://avatars.dicebear.com/api/adventurer-neutral/${Math.random()}.svg`
+    const profilePic = `https://avatars.dicebear.com/api/adventurer-neutral/${randBet(10, 100)}.svg`
 
     return (
         <ProfileContext.Provider value={{name, profilePic}}>

@@ -5,6 +5,7 @@
   --Navbar-Background-Color: #000;
   --Sidebar-Background-Color: #212121;
   --Content-Background-Color: #3d3d3d;
+  --Card-Background-Color: #525252;
   --Text-Color: #e0e0e0;
   --Detail-Text-Color: #B0B2B8;
   --Icon-Color: #004e97;
@@ -13,6 +14,10 @@
   --Maybe-another-color2: #738290;
   --border-gap: 20px;
   --icon-size: 40px;
+}
+
+*{
+	box-sizing: border-box;
 }
 
 body {
@@ -129,7 +134,7 @@ body {
 }
 
 .dashboard{
-	background-color: var(--Maybe-another-color2);
+	/* background-color: var(--Maybe-another-color2); */
 	width: 98%;
 	height: 96%;
 	&-header{
@@ -156,9 +161,17 @@ body {
 			}
 		}
 	}
+	&-toprow{
+		/* background-color: aqua; */
+		height: 30%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 0px;
+	}
 	&-block{
-		background-color: #28d4da;
-		height: 100px;
-		width: 100px;
+		background-color: var(--Card-Background-Color);
+		height: 100%;
+		width: 24%;
 	}
 }
