@@ -6,17 +6,20 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { SideBarProvider } from "./Context/SideBar";
 import { ProfileProvider } from "./Context/Profile";
+import { ThemeProvider } from "./Context/Theme";
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
 );
 root.render(
 	<React.StrictMode>
-		<ProfileProvider>
-			<SideBarProvider>
-				<App />
-			</SideBarProvider>
-		</ProfileProvider>
+		<ThemeProvider>
+			<ProfileProvider>
+				<SideBarProvider>
+					<App />
+				</SideBarProvider>
+			</ProfileProvider>
+		</ThemeProvider>
 	</React.StrictMode>
 );
 

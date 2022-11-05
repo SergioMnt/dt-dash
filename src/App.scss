@@ -2,18 +2,30 @@
 
 :root {
   --user-img-size: 35px;
-  --Navbar-Background-Color: #000;
-  --Sidebar-Background-Color: #212121;
-  --Content-Background-Color: #3d3d3d;
-  --Card-Background-Color: #525252;
-  --Text-Color: #e0e0e0;
-  --Detail-Text-Color: #B0B2B8;
-  --Icon-Color: #004e97;
-  --SVG-Main-Color: #659157;
-  --Maybe-another-color: #28d4da;
-  --Maybe-another-color2: #738290;
   --border-gap: 20px;
   --icon-size: 40px;
+
+  --Navbar-Background-Color-Dark: #000;
+  --Sidebar-Background-Color-Dark: #212121;
+  --Content-Background-Color-Dark: #3d3d3d;
+  --Card-Background-Color-Dark: #525252;
+  --Text-Color-Dark: #e0e0e0;
+  --Detail-Text-Color-Dark: #B0B2B8;
+  --Icon-Color-Dark: #004e97;
+  --SVG-Main-Color-Dark: #659157;
+  --Maybe-another-color-Dark: #28d4da;
+  --Maybe-another-color2-Dark: #738290;
+  
+  --Navbar-Background-Color-Light: #d8d8d8;
+  --Sidebar-Background-Color-Light: #323232;
+  --Content-Background-Color-Light: #cacaca;
+  --Card-Background-Color-Light: #525252;
+  --Text-Color-Light: #393939;
+  --Detail-Text-Color-Light: #B0B2B8;
+  --Icon-Color-Light: #004e97;
+  --SVG-Main-Color-Light: #659157;
+  --Maybe-another-color-Light: #28d4da;
+  --Maybe-another-color2-Light: #738290;
 }
 
 *{
@@ -27,13 +39,19 @@ body {
 }
 
 .Navbar{
-	background-color: var(--Navbar-Background-Color);
-	color: var(--Text-Color);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0px var(--border-gap);
 	height: 50px;
+	&-dark{
+		background-color: var(--Navbar-Background-Color-Dark);
+		color: var(--Text-Color-Dark);
+	}
+	&-light{
+		background-color: var(--Navbar-Background-Color-Light);
+		color: var(--Text-Color-Light);
+	}
 	&-user{
 		display: flex;
 		align-items: center;
@@ -46,23 +64,23 @@ body {
 			padding-right: 5px;
 		}
 	}
-	&-refDate{
+	/* &-refDate{
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-size: 0.8rem;
-		color: var(--Detail-Text-Color);
+		color: var(--Detail-Text-Color-Dark);
 		&> button{
 			outline: none;
 			border: none;
 			background-color: transparent;
-			color: var(--Detail-Text-Color);
+			color: var(--Detail-Text-Color-Dark);
 			cursor: pointer;
 			&> span{
 				font-size: 1.2rem;
 			}
 		}
-	}
+	} */
 }
 
 .profile-pic {
@@ -82,20 +100,25 @@ body {
 	position: absolute;
 	height: 100%;
 	right: 0;
-	background-color: var(--Content-Background-Color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	&-dark{
+		background-color: var(--Content-Background-Color-Dark);
+	}
+	&-light{
+		background-color: var(--Content-Background-Color-Light);
+	}
 }
 
 .sidebar{
-	background-color: var(--Sidebar-Background-Color);
+	background-color: var(--Sidebar-Background-Color-Dark);
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	&-nav{
-		color: var(--Text-Color);
+		color: var(--Text-Color-Dark);
 	}
 	&-item{
 		display: flex;
@@ -142,12 +165,12 @@ body {
 		align-items: baseline;
 		justify-content: space-between;
 		&-title{
-			color: var(--Text-Color);
+			color: var(--Text-Color-Dark);
 			font-size: 2rem;
 			font-weight: bolder;
 		}
 		&-date{
-			color: var(--Detail-Text-Color);
+			color: var(--Detail-Text-Color-Dark);
 			/* background-color: #004e97; */
 			display: flex;
 			align-items: center;
@@ -155,7 +178,7 @@ body {
 				cursor: pointer;
 				margin-right: 5px;
 				background-color: transparent;
-				color: var(--Detail-Text-Color);
+				color: var(--Detail-Text-Color-Dark);
 				border: none;
 				outline: none;
 			}
@@ -170,7 +193,7 @@ body {
 		padding: 10px 0px;
 	}
 	&-block{
-		background-color: var(--Card-Background-Color);
+		background-color: var(--Card-Background-Color-Dark);
 		height: 100%;
 		width: 24%;
 	}
