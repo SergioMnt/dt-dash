@@ -7,19 +7,22 @@ import reportWebVitals from './reportWebVitals';
 import { SideBarProvider } from "./Context/SideBar";
 import { ProfileProvider } from "./Context/Profile";
 import { ThemeProvider } from "./Context/Theme";
+import { DataProvider } from "./Context/Data";
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
 );
 root.render(
 	<React.StrictMode>
-		<ThemeProvider>
-			<ProfileProvider>
-				<SideBarProvider>
-					<App />
-				</SideBarProvider>
-			</ProfileProvider>
-		</ThemeProvider>
+		<DataProvider>
+			<ThemeProvider>
+				<ProfileProvider>
+					<SideBarProvider>
+						<App />
+					</SideBarProvider>
+				</ProfileProvider>
+			</ThemeProvider>
+		</DataProvider>
 	</React.StrictMode>
 );
 

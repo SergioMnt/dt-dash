@@ -23,12 +23,6 @@ export const Navbar = () => {
     )
 }
 
-/* type SideBarMenu = {
-    icon: string,
-    text?: string,
-    link?: string
-}[] */
-
 export const SideBar = () => {
 
     const items = [
@@ -37,11 +31,11 @@ export const SideBar = () => {
             text: "Dashboard",
             link: 'dt-dash'
         },
-        {
+        /* {
             icon: "rocket",
             text: "Real-Time Dashboard",
             link: 'tickets'
-        }
+        } */
     ]
 
     const { width, toggleSideBar } = useContext(SideBarContext)
